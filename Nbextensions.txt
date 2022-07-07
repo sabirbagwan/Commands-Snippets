@@ -1,0 +1,4 @@
+# For enabling Nbextenions in Jupyter notebook
+
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --system
