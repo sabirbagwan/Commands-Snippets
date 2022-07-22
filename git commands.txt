@@ -4,3 +4,10 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:sabirbagwan/repositoryName.git
 git push -u origin main
+
+
+## To hard Reset the branch
+git checkout <branch_name>
+git pull -s recursive -X theirs
+git reset --hard origin/<branch_name>
+git fetch
