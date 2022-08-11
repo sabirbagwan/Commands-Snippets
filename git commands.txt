@@ -11,3 +11,7 @@ git checkout <branch_name>
 git pull -s recursive -X theirs
 git reset --hard origin/<branch_name>
 git fetch
+
+
+## Remove from staging area
+git rm --cached foler/filename

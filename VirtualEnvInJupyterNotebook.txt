@@ -1,0 +1,7 @@
+1. python -m venv venv
+
+2. venv\Scripts\activate
+
+3. ipython kernel install --user --name=venv
+
+4. jupyter-kernelspec uninstall venv

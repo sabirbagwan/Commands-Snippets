@@ -1,0 +1,4 @@
+# Run PowerShell as admin
+
+Set-ExecutionPolicy unrestricted
+A
