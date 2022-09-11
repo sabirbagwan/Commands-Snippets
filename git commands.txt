@@ -15,3 +15,15 @@ git fetch
 
 ## Remove from staging area
 git rm --cached foler/filename
+
+##     Successfully created project 'myproject' on GitHub, but initial push failed:
+    remote: error: GH007: Your push would publish a private email address.
+
+Find your GitHub noreply address in your GitHub's Personal 
+Settings → Emails. It's mentioned in the description of the Keep my email address private checkbox. 
+Usually, it starts with a unique identifier, plus your username.
+
+git config --global user.email "{ID}+{username}@users.noreply.github.com"
+git config user.email "{ID}+{username}@users.noreply.github.com"
+git commit --amend --reset-author
+git push

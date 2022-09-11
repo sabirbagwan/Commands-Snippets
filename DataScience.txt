@@ -1,0 +1,14 @@
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+import seaborn as sns
+sns.set(rc={'figure.figsize':(20,10)})
+sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsize":20}) 
+sns.set_style("whitegrid")
+sns.set(font_scale=2)
+
+import warnings
+warnings.filterwarnings('ignore')
