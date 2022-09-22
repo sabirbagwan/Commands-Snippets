@@ -1,14 +1,41 @@
 import pandas as pd
 import numpy as np
 
+
+import warnings
+warnings.filterwarnings('ignore')
+
+
+######### PLOTTING VISUALISATION #########
+
 import matplotlib.pyplot as plt
 %matplotlib inline
 
 import seaborn as sns
-sns.set(rc={'figure.figsize':(20,10)})
+sns.set(rc={'figure.figsize':(20,8)})
 sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsize":20}) 
 sns.set_style("whitegrid")
 sns.set(font_scale=2)
 
-import warnings
-warnings.filterwarnings('ignore')
+pd.set_option('display.max_columns', None)
+
+plt.xticks(rotation=70)
+plt.show()
+
+sns.distplot([df['Price']])
+
+sns.heatmap(df.corr(), cmap="Blues")
+
+df['Company'].value_counts().plot(kind = 'bar')
+
+######## Regressor model import ############
+
+from sklearn.linear_model import LinearRegression, Ridge, Lasso 
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, ExtraTreesRegressor
+from sklearn.svm import SVR
+from xgboost import XGBRegressor
+
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
