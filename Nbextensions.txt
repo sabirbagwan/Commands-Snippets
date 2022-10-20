@@ -2,3 +2,4 @@
 
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --system
+jupyter nbextension enable hinterland/hinterland
