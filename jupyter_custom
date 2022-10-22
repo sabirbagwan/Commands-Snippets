@@ -4,3 +4,8 @@ jupyter_core.paths.jupyter_config_dir()
 
 from IPython.display import display, HTML
 display(HTML("<style>.container { width:95% !important; }</style>"))
+
+
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
