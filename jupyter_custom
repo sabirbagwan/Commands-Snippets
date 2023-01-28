@@ -2,6 +2,9 @@ import jupyter_core
 jupyter_core.paths.jupyter_config_dir()
 
 
+import jupyter_core
+jupyter_core.paths.jupyter_config_dir()
+
 from IPython.display import display, HTML
 display(HTML("<style>.container { width:95% !important; }</style>"))
 
