@@ -19,7 +19,7 @@ sns.set(font_scale=2)
 
 pd.set_option('display.max_columns', None)
 
-plt.xticks(rotation=70)
+plt.xticks(rotation=70, ha = 'right')
 plt.show()
 
 sns.distplot([df['Price']])
