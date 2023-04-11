@@ -12,6 +12,12 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 
 import seaborn as sns
+
+color_palette = sns.color_palette("pastel")
+ax = sns.boxplot(data=data, x='label', y='word_count', 
+                 order=sorted(data['label'].unique()), 
+                 palette=color_palette)
+
 sns.set(rc={'figure.figsize':(20,8)})
 sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsize":20}) 
 sns.set_style("whitegrid")
@@ -24,6 +30,24 @@ pd.set_option('display.max_columns', None)
 
 plt.xticks(rotation=70, ha = 'right')
 plt.show()
+
+
+pastel_colors = [
+    '#FFB3BA', '#FFDFBA', '#FFFFBA', '#BAFFC9', '#BAE1FF', '#BABAFF',
+    '#E6BAFF', '#FFBAF8', '#FFACAC', '#FFDAC1', '#E3FFC1', '#C1FFE3',
+    '#C1DFFF', '#D5C1FF', '#FFC1E8', '#FFC1C1'
+]
+
+import plotly.express as px
+
+# Define color palette
+color_palette = px.colors.qualitative.Pastel
+
+# Create violin plot with pastel colors
+fig = px.violin(data, y="word_count", box=True, points="all", 
+                title="Distribution of Word Count in Tweets",
+                color_discrete_sequence=color_palette)
+
 
 sns.distplot([df['Price']])
 
