@@ -17,6 +17,9 @@ sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsiz
 sns.set_style("whitegrid")
 sns.set(font_scale=2)
 
+sns.countplot(data=data, x='label', df, 
+                   palette="pastel")
+
 pd.set_option('display.max_columns', None)
 
 plt.xticks(rotation=70, ha = 'right')
