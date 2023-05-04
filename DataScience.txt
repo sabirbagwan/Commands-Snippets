@@ -23,10 +23,13 @@ sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsiz
 sns.set_style("whitegrid")
 sns.set(font_scale=2)
 
-sns.countplot(data=data, x='label', df, 
-                   palette="pastel")
+plt.style.use('dark_background')
 
+sns.countplot(data=data, x='label', df, palette="pastel")
+sns.set_palette("pastel")
 pd.set_option('display.max_columns', None)
+sns.set_theme(style="darkgrid" )
+sns.set_theme(style="whitegrid", palette="pastel")
 
 plt.xticks(rotation=70, ha = 'right')
 plt.show()
@@ -38,6 +41,8 @@ pastel_colors = [
     '#C1DFFF', '#D5C1FF', '#FFC1E8', '#FFC1C1'
 ]
 
+
+###################################################################################
 import plotly.express as px
 
 # Define color palette
