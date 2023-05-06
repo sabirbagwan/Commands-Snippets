@@ -18,6 +18,8 @@ ax = sns.boxplot(data=data, x='label', y='word_count',
                  order=sorted(data['label'].unique()), 
                  palette=color_palette)
 
+color='#00CC9
+
 sns.set(rc={'figure.figsize':(20,8)})
 sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsize":20}) 
 sns.set_style("whitegrid")
