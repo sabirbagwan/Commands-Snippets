@@ -56,20 +56,14 @@ fig = px.violin(data, y="word_count", box=True, points="all",
                 color_discrete_sequence=color_palette)
 
 
-sns.distplot([df['Price']])
+############### Heatmatp #########################
+
+plt.figure(figsize=(20, 12))
+sns.heatmap(original_df.corr(), annot=True, cmap='coolwarm')
 
 sns.heatmap(df.corr(), cmap="Blues")
 
+
+sns.distplot([df['Price']])
+
 df['Company'].value_counts().plot(kind = 'bar')
-
-######## Regressor model import ############
-
-from sklearn.linear_model import LinearRegression, Ridge, Lasso 
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor, ExtraTreesRegressor
-from sklearn.svm import SVR
-from xgboost import XGBRegressor
-
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
