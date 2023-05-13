@@ -33,6 +33,9 @@ pd.set_option('display.max_columns', None)
 sns.set_theme(style="darkgrid" )
 sns.set_theme(style="whitegrid", palette="pastel")
 
+correlation = train.corr()
+correlation.style.background_gradient(cmap='cividis')
+
 plt.xticks(rotation=70, ha = 'right')
 plt.show()
 
