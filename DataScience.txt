@@ -75,7 +75,7 @@ df['Company'].value_counts().plot(kind = 'bar')
 ######################
 ### Pandas Profile Report
 
-import ydata_profiling
+from ydata_profiling import ProfileReport
 profile = ProfileReport(df)
 profile.to_notebook_iframe()
 
