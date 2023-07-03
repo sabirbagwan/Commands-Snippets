@@ -70,3 +70,13 @@ sns.heatmap(df.corr(), cmap="Blues")
 sns.distplot([df['Price']])
 
 df['Company'].value_counts().plot(kind = 'bar')
+
+
+######################
+### Pandas Profile Report
+
+import ydata_profiling
+profile = ProfileReport(df)
+profile.to_notebook_iframe()
+
+
