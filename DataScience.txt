@@ -20,10 +20,10 @@ ax = sns.boxplot(data=data, x='label', y='word_count',
 
 color='#00CC9
 
-sns.set(rc={'figure.figsize':(20,8)})
-sns.set_context("paper", rc={"font.size":20, "axes.titlesize":20, "axes.labelsize":20}) 
-sns.set_style("whitegrid")
-sns.set(font_scale=2)
+sns.set(rc={'figure.figsize':(10,5)})
+sns.set_context("paper", rc={"font.size":10, "axes.titlesize":10, "axes.labelsize":10}) 
+sns.set_style("darkgrid")
+sns.set(font_scale=1)
 
 plt.style.use('dark_background')
 
