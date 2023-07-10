@@ -80,3 +80,15 @@ profile = ProfileReport(df)
 profile.to_notebook_iframe()
 
 
+# Create the countplot
+plt.figure(figsize=(12, 6))
+ax = sns.barplot(x=ciplaelementss.index, y=ciplaelementss.values)
+plt.xlabel('Element')
+plt.ylabel('Count')
+plt.title('Cipla NDC Description Elements')
+
+# Add value labels to the bars
+for i, value in enumerate(ciplaelementss.values):
+    ax.text(i, value, str(value), ha='center', va='bottom')
+
+
