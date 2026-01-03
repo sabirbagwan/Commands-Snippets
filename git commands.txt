@@ -46,3 +46,17 @@ git push origin main
 
 
 
+# Go to project directory
+cd /var/www/flask-app
+
+# Pull latest code from GitHub
+git pull origin main
+
+# Restart Flask (Gunicorn)
+systemctl restart flaskapp
+
+# Optional: check status
+systemctl status flaskapp
+
+
+
