@@ -1,0 +1,9 @@
+Find the process using port 5000
+lsof -i :5000
+
+Kill that process using PID
+kill -9 12345
+
+One-line command (fastest) Kill-all
+kill -9 $(lsof -ti :5000)
+
